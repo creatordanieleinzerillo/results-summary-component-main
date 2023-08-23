@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .outer-flex{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      background-color: rgb(255, 255, 255);
+      height: 100%; 
+      width: 100%; 
+    }
+
+    .box{
+      margin-left: 1%;
+      display: flex;
+      flex-direction: column;
+     
+      height: 52%;
+      width: 19%; 
+      border-radius: 7%;
+    }
+
+    .box.blue{
+      background:-webkit-linear-gradient(rgb(101, 52, 204), rgb(91, 62, 250), rgb(85, 58, 247), rgb(61, 48, 239),  rgb(51, 44, 234));
+    }
+
+    .space-around{
+      display: flex;
+      justify-content: space-around;
+      justify-items: space-around;
+    }
+
+    .that-white{
+      color: rgb(212, 205, 255)
+    }
+
+    .medium{
+      font-size: 25px;
+    }
+    
+
+    .result {
+      font-size : 50px; 
+
+    }
+    .white{
+      color: white; 
+    }
+
+    .center{
+      display: flex;
+      justify-content: center;
+    }
+    .column{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .under-result{
+      font-size:  14px;
+      color: rgb(134, 121, 255);
+    }
+
+    .black-radient{
+        background: linear-gradient(rgb(76, 34, 204), rgb(69, 45, 221), rgb(70, 51, 237))
+    }
+
+    .round{
+      border-radius: 100%; 
+      box-shadow: 2px;
+      width: 50%; 
+      aspect-ratio: 1 / 1;
+    }
+
+    .big{
+      font-size: 27.5px;
+    }
+
+    .overflow-wrap{
+
+      overflow-wrap: break-word;
+    }
+
+    .box-shadow{
+      border-right: 3px;
+      border-color: dacdff;
+      border-bottom: 3px;
+      box-shadow: 10px 10px 10px rgba(244, 247, 254, 0.842)
+    }
+
+    .flex{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .smaller-div{
+      width: 70%; 
+      word-spacing: 0.4em; 
+      color: rgb(200, 200, 200); 
+      font-size: 18px; 
+    }
+
+    .text-center{
+      text-align: center; 
+    }
+
+    .white-background{
+      background-color: white;
+    }
+
+    body{
+      margin: 0; 
+      height: 100vh;
+      width: 100vw; 
+      background-color: aqua;
+    }
+    
+    .half-div{
+      width: 50%;
+    }
+
+    .point-div{
+      width: 50%;  
+      height: 20%; 
+      font-size: 17px; 
+      margin-top: 10%;
+      margin-left: -10%; 
+    }
+
+
+    .button-div:hover{
+      background-image: -webkit-linear-gradient(rgb(101, 52, 204), rgb(91, 62, 250), rgb(85, 58, 247), rgb(61, 48, 239),  rgb(51, 44, 234))
+    }
+
+    .button-div{
+      width: 70%;
+      margin-left: 2.2%; 
+      background-image: -webkit-linear-gradient(rgb(48, 59, 89), rgb(48, 59, 89)); 
+      color: white; 
+      height: 10%; 
+      margin-top: 10%; 
+      border-radius: 20px 20px 20px 20px; 
+      font-size: 17px;
+      transition-duration: 1s;
+      transition-delay: 100ms;
+    }
+
+    .middle{
+      align-content: center;
+      align-items: center;
+    }
+
+    .big.very {
+      font-size: 25px;
+    }
+    
+    .noselect {
+      -webkit-touch-callout: none; 
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+          -moz-user-select: none; 
+            -ms-user-select: none; 
+                user-select: none; 
+    }
+  </style>
+</head>
+<body>
+    <div class = "outer-flex">
+      
+        <div class = "box blue">
+          <div class = "center that-white medium" style = "margin-top: 10%; margin-bottom: 10%;">Your Result</div>
+          <div class = "center">
+            <div class = "center column space-between round black-radient">
+              <div class = "center white result">76</div>
+              <div class = "center under-result">of 100</div>
+            </div>
+          </div>
+
+          <div class = "center white big" style = "margin-top: 10%; margin-bottom: 5%;"><b>Great</b></div>
+          <div class="center">
+            <div class = "center overflow-wrap smaller-div text-center">
+              You scored higher than 65% of the people who have taken these tests.
+            </div>
+          </div>
+      </div>
+      <div class="box white-background box-shadow noselect">
+        <div class = "big very" style = "margin-top: 20%; color: 9095a6;">
+          <b>Summary</b>
+        </div>
+
+        <div class = "flex row">
+          <div class="point-div center flex row" style = "color: rgb(214, 97, 112);"> <div style = "margin-right: 4%;"><img src = "assets/images/icon-reaction.svg" style = "align-self: flex-start; height: 22px;"></div>Reaction</div>
+          <div class="point-div center">80 / <t style = "color: gray">100</t></div>
+        </div>
+
+        <div class ="flex row">
+          <div class="point-div center flex row" style = "color: rgb(231, 188, 45);"> <div style = "margin-right: 4%;"><img src = "assets/images/icon-memory.svg" style = "height: 22px;"></div>Memory</div>
+          <div class="point-div center">92 / <t style = "color: gray">100</t></div>
+        </div>
+        
+        <div class = "flex row">
+          <div class = "point-div center flex row" style = "color: rgb(135, 213, 193)"> <div style = "margin-right: 4%;"><img src = "assets/images/icon-verbal.svg" style = "margin-left: -4%; height: 20px;"></div> Verbal </div>
+          <div class="point-div center"> 61 / <t style = "color: gray">100</t> </div>
+        </div>
+
+        <div class = "flex row">
+          <div class = "point-div center flex row" style = "color: rgb(114, 113, 185)"> <div style = "margin-right: 4%;"><img src = "assets/images/icon-visual.svg" style = "align-self: flex-start; height: 20px;"></div>Visual</div>
+          <div class = "point-div center"><b>72</b> / <t style = "color: gray">100</t></div>
+        </div>
+        <div class="button-div center middle noselect">Continue</div>
+      </div>
+  </div>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+</body>
+</html>
